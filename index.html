@@ -1,32 +1,181 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>test by lixiaochou077</title>
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-      <h1>
-         你用pc和ipad访问看到我
-      </h1>    
-  </body>
-<script type="text/javascript">   
-function browserRedirect() {     
-    var sUserAgent= navigator.userAgent.toLowerCase();     
-    var bIsIpad= sUserAgent.match(/ipad/i) == "ipad";     
-    var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os";      
-    var bIsMidp= sUserAgent.match(/midp/i) == "midp";      
-    var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";     
-    var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb";     
-    var bIsAndroid= sUserAgent.match(/android/i) == "android";      
-    var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce";     
-    var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile";         
-    if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {      
-        window.location.href= 'http://fun.alipay.com/cd/index.htm';      
-    }     
-}  
-browserRedirect();    
-</script>
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            首页DEMO
+        </title>
+        <link rel="stylesheet" href="/stylesheets/base.css" type="text/css" media="screen" charset="utf-8" />
+        <link rel="stylesheet" href="/stylesheets/styles.css" type="text/css" media="screen" charset="utf-8" />
+    </head>
+    <body>
+        <div class="ui-grid-20 ui-grid-right">
+            <div class="content">
+                <div class="ui-grid-14">
+                    <div class="app-prodDetail">
+                        <div class="app-prodDetail-img">
+                            产品名
+                        </div>
+                        <div class="app-prodDetail-title">
+                            <h2>
+                                产品名
+                            </h2>
+                        </div>
+                        <div class="app-prodDetail-info">
+                            <p>
+                                产品描述神马的产品描述神马的产品描述神马的
+                            </p>
+                        </div>
+                        <div class="app-prodDetail-menu">
+                            <ul>
+                                <li class="list last">
+                                    <a href="#" seed="list-link" smartracker="on">我是链接</a> <a href="#" seed="list-link" smartracker="on">我是链接</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div><!-- app-prodDetail结束 -->
+                    <form name="" id="" action="#" method="post">
+        	            <input type="hidden" name="" value="">
+                        <fieldset>
+                        <div class="fm-item prod-choosecity">
+                            <h3 seed="lf-jiaofei-citychoicewenzi">所在城市</h3>
+                            <input type="text" name="cityInput" id="cityInput" class="i-text" value="杭州" maxlength="8" seed="fmItem-cityInput" smartracker="on" autocomplete="off">
+                            <a href="javascript:void(0)" class="a-arrow" id="cityhint-city-select" seed="lf-jiaofei-chengshi-hot">&nbsp;</a>
+                            <div class="hot-city-container fn-hide" id="J-hot-city">
+                                <div class="hot-city-content">
+                                    <div class="tab">
+                                        <div class="hot-city-tab-title">
+                                            <ul class="hotcity-info">
+                                                <li><span>热门城市</span></li>
+                                            </ul>
+                                        </div>
+                                        <div class="hot-city-tab-content">
+                                            <ul seed="puc-hot-city">  
+                                                <li title="上海">上海</li>
+                                                <li title="杭州">杭州</li>
+                                                <li title="重庆">重庆</li>
+                                                <li title="南京">南京</li>
+                                                <li title="合肥">合肥</li>
+                                                <li title="成都">成都</li>
+                                                <li title="郑州">郑州</li>
+                                                <li title="济南">济南</li>
+                                                <li title="苏州">苏州</li>
+                                                <li title="长春">长春</li>
+                                                <li title="沈阳">沈阳</li>
+                                                <li title="武汉">武汉</li>
+                                                <li title="昆明">昆明</li>
+                                                <li title="深圳">深圳</li>
+                                                <li title="长沙">长沙</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="fm-explain">可直接输入城市或城市拼音</div>
+                            <div id="tips" class="fn-hide"></div>
+                        </div>
+                        </fieldset>
+                    </form>
+                    <div class="app-prod-desc">
+                        <span class="app-prod-desc-label">标题文字</span> <a href="#" class="ui-button ui-button-sorange J-login" seed="appProdDesc-link" smartracker="on"><span class="ui-button-text">我是按钮</span></a>
+                        <p class="app-prod-desc-text">
+                            描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字
+                        </p>
+                    </div>
+                    <div class="app-prod-desc app-prod-desc-last">
+                        <span class="app-prod-desc-label">标题文字</span> <a href="#" class="ui-button ui-button-sorange J-login" seed="appProdDesc-link" smartracker="on"><span class="ui-button-text">我是按钮</span></a>
+                        <p class="app-prod-desc-text">
+                            描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字描述文字
+                        </p>
+                    </div><!-- app-prod-desc结束 -->
+                    <div class="prod-newbie">
+                        <div id="faq" class="tip-faq">
+                            <h3>使用遇到问题？</h3>
+                            <dl>
+                                <dt>我没有支付宝账户，可以付款吗？</dt>
+                                <dd>答：可以，您只要有网银等支付方式就可付款，您也可以让别人帮您付款。</dd>
+                            </dl>
+                            <p class="tip-faq-link">
+                                <a href="http://help.alipay.com/lab/234447-210407/0-210407.htm" target="_blank" seed="faq-morehelp">更多相关帮助</a>
+                            </p> 
+	                        <form method="get" action="http://help.alipay.com/lab/search_new_result.htm" name="faqsearch" target="_blank" id="faqsearch">
+	                        <div class="com-search">
+	    	                    <span><input name="word" id="word" data-explain="请输入您遇到的问题" value="" class="i-text i-text-s" type="text"></span>
+	    	                    <input name="uisrc" id="uisrc" value="pagefaq" type="hidden">
+	    	                    <input class="btn-fixed" value="搜索" type="submit" seed="faq-search">
+	                       </div>
+	                       </form>	   
+                        </div><!-- ui-faq结束 -->
+                    </div>
+                </div><!-- ui-grid-14结束 -->
+                <div class="ui-grid-6 ui-grid-right">
+                    <div class="sidebar">
+                        <div class="app-prodAlert">
+                            <h4>
+                                提示信息：
+                            </h4>
+                            <p>
+                                提示内容提示内容提示内容提示内容提示内容
+                            </p>
+                        </div><!-- app-prodAlert结束 -->
+                        <div class="app-mod app-mod-notice">
+                            <div class="app-mod-title">
+                                <h4>
+                                    公告栏
+                                </h4>
+                            </div>
+                            <div class="app-mod-content">
+                                <ul class="ui-list">
+                                    <li class="ui-list-item">
+                                        <a href="#">公告内容</a>
+                                    </li>
+                                    <li class="ui-list-item">
+                                        <a href="#">公告内容</a>
+                                    </li>
+                                    <li class="ui-list-item">
+                                        <a href="#">公告内容</a>
+                                    </li>
+                                    <li class="ui-list-item">
+                                        <a href="#">公告内容</a>
+                                    </li>
+                                </ul><!-- ui-list -->
+                            </div>
+                        </div><!-- app-mod -->
+                        <div class="ui-share-item">
+                            <h4>
+                                在新浪微博关注我们
+                            </h4>
+                            <div class="ui-share-item-img">
+                                <a href="http://weibo.com/shenghuoalipay" target="_blank" seed="share-item-img"><img src="https://img.alipay.com/sys/personalprod/style/home/img/img-weibo.png" width="50" height="50" alt="＋加关注" /></a>
+                            </div>
+                            <div class="ui-share-item-name">
+                                <span class="ui-share-item-name-vip"><a href="http://weibo.com/shenghuoalipay" target="_blank" seed="share-item-link">支付宝生活助手</a></span> <a class="ui-share-item-name-follow" href="http://weibo.com/shenghuoalipay" target="_blank" seed="share-item-add">加关注</a>
+                            </div>
+                            <div id="shareit" class="ui-share-item-icon">
+                                分享到： <a class="ui-icon-sns ui-icon-sns-sina" href="#" title="分享到新浪微博" seed="share-item-sina">分享到新浪微博</a> <a class="ui-icon-sns ui-icon-sns-qq" href="#" title="分享到QQ微博" seed="share-item-qq">分享到QQ微博</a> <a class="ui-icon-sns ui-icon-sns-renren" href="#" title="分享到人人网" seed="share-item-renren">分享到人人网</a> <a class="ui-icon-sns ui-icon-sns-kaixin" href="#" title="分享到开心网" seed="share-item-kaixin">分享到开心网</a> <a class="ui-icon-sns ui-icon-sns-douban" href="#" title="分享到豆瓣" seed="share-item-douban">分享到豆瓣</a>
+                            </div>
+                        </div><!-- ui-share2 -->
+                    </div><!-- sidebar结束 -->
+                </div><!-- ui-grid-6结束 -->
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript">
+    function browserRedirect() {     
+        var sUserAgent= navigator.userAgent.toLowerCase();     
+        var bIsIpad= sUserAgent.match(/ipad/i) == "ipad";     
+        var bIsIphoneOs= sUserAgent.match(/iphone os/i) == "iphone os";      
+        var bIsMidp= sUserAgent.match(/midp/i) == "midp";      
+        var bIsUc7= sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";     
+        var bIsUc= sUserAgent.match(/ucweb/i) == "ucweb";     
+        var bIsAndroid= sUserAgent.match(/android/i) == "android";      
+        var bIsCE= sUserAgent.match(/windows ce/i) == "windows ce";     
+        var bIsWM= sUserAgent.match(/windows mobile/i) == "windows mobile";         
+        if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {      
+            window.location.href= 'http://fun.alipay.com/cd/index.htm';      
+        }     
+    }  
+    browserRedirect();    
+    </script>
 </html>
+

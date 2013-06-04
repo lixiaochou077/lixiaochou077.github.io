@@ -1,255 +1,694 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300italic,700italic,300,700);
-
-body {
-  padding:50px;
-  font:14px/1.5 Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color:#777;
-  font-weight:300;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color:#222;
-  margin:0 0 20px;
-}
-
-p, ul, ol, table, pre, dl {
-  margin:0 0 20px;
-}
-
-h1, h2, h3 {
-  line-height:1.1;
-}
-
-h1 {
-  font-size:28px;
-}
-
-h2 {
-  color:#393939;
-}
-
-h3, h4, h5, h6 {
-  color:#494949;
-}
-
-a {
-  color:#39c;
-  font-weight:400;
-  text-decoration:none;
-}
-
-a small {
-  font-size:11px;
-  color:#777;
-  margin-top:-0.6em;
-  display:block;
-}
-
-.wrapper {
-  width:860px;
-  margin:0 auto;
-}
-
-blockquote {
-  border-left:1px solid #e5e5e5;
-  margin:0;
-  padding:0 0 0 20px;
-  font-style:italic;
-}
-
-code, pre {
-  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
-  color:#333;
-  font-size:12px;
-}
-
-pre {
-  padding:8px 15px;
-  background: #f8f8f8;  
-  border-radius:5px;
-  border:1px solid #e5e5e5;
-  overflow-x: auto;
-}
-
-table {
-  width:100%;
-  border-collapse:collapse;
-}
-
-th, td {
-  text-align:left;
-  padding:5px 10px;
-  border-bottom:1px solid #e5e5e5;
-}
-
-dt {
-  color:#444;
-  font-weight:700;
-}
-
-th {
-  color:#444;
-}
-
-img {
-  max-width:100%;
-}
-
-header {
-  width:270px;
-  float:left;
-  position:fixed;
-}
-
-header ul {
-  list-style:none;
-  height:40px;
-  
-  padding:0;
-  
-  background: #eee;
-  background: -moz-linear-gradient(top, #f8f8f8 0%, #dddddd 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f8f8f8), color-stop(100%,#dddddd));
-  background: -webkit-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -o-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: -ms-linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  background: linear-gradient(top, #f8f8f8 0%,#dddddd 100%);
-  
-  border-radius:5px;
-  border:1px solid #d2d2d2;
-  box-shadow:inset #fff 0 1px 0, inset rgba(0,0,0,0.03) 0 -1px 0;
-  width:270px;
-}
-
-header li {
-  width:89px;
-  float:left;
-  border-right:1px solid #d2d2d2;
-  height:40px;
-}
-
-header ul a {
-  line-height:1;
-  font-size:11px;
-  color:#999;
-  display:block;
-  text-align:center;
-  padding-top:6px;
-  height:40px;
-}
-
-strong {
-  color:#222;
-  font-weight:700;
-}
-
-header ul li + li {
-  width:88px;
-  border-left:1px solid #fff;
-}
-
-header ul li + li + li {
-  border-right:none;
-  width:89px;
-}
-
-header ul a strong {
-  font-size:14px;
-  display:block;
-  color:#222;
-}
-
-section {
-  width:500px;
-  float:right;
-  padding-bottom:50px;
-}
-
-small {
-  font-size:11px;
-}
-
-hr {
-  border:0;
-  background:#e5e5e5;
-  height:1px;
-  margin:0 0 20px;
-}
-
-footer {
-  width:270px;
-  float:left;
-  position:fixed;
-  bottom:50px;
-}
-
-@media print, screen and (max-width: 960px) {
-  
-  div.wrapper {
-    width:auto;
+/** begin ---ui-btn-base.css---*/
+/**
+ * @name:       按钮（通用）ui-button
+ * @author:     展新（zhanxin.lin@alipay.com）
+ * @example:
+ * 外层可以是 div, p, a, span 标签
+ * 里层可以是 a, input, button
+ * div > a
+ * <div class="ui-button ui-button-sorange">
+ *    <a class="ui-button-text">确定</a>
+ * </div>
+ *
+ * div > input
+ * <div class="ui-button ui-button-sorange">
+ *    <input type="button" class="ui-button-text" value="确定" />
+ * </div>
+ *
+ * a > input
+ * <a class="ui-button ui-button-sorange">
+ *    <span class="ui-button-text">确定</span>
+ * </a>
+ */
+.ui-button * {
     margin:0;
-  }
-  
-  header, section, footer {
-    float:none;
-    position:static;
-    width:auto;
-  }
-  
-  header {
-    padding-right:320px;
-  }
-  
-  section {
-    border:1px solid #e5e5e5;
-    border-width:1px 0;
-    padding:20px 0;
-    margin:0 0 20px;
-  }
-  
-  header a small {
-    display:inline;
-  }
-  
-  header ul {
-    position:absolute;
-    right:50px;
-    top:52px;
-  }
-}
-
-@media print, screen and (max-width: 720px) {
-  body {
-    word-wrap:break-word;
-  }
-  
-  header {
     padding:0;
-  }
-  
-  header ul, header p.view {
-    position:static;
-  }
-  
-  pre, code {
-    word-wrap:normal;
-  }
+}
+.ui-button {
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    text-decoration: none !important;
+    vertical-align: middle;
+    overflow: visible;
+    cursor: pointer;
+    font-family: verdana, Hiragino Sans GB;
 }
 
-@media print, screen and (max-width: 480px) {
-  body {
-    padding:15px;
-  }
-  
-  header ul {
-    display:none;
-  }
+div.ui-button, p.ui-button, span.ui-button {
+    *display: inline;/* for ie */
 }
 
-@media print {
-  body {
-    padding:0.4in;
-    font-size:12pt;
-    color:#444;
-  }
+.ui-button-text {
+    display: inline-block;
+    *display: inline;/* for ie */
+    *zoom: 1;
+    cursor: pointer;
+    border: 0;
+    text-decoration: none;
+    overflow: visible;
+    font-size: 14px;
+    font-weight: 700;
 }
+.ui-button a.ui-button-text:hover {
+    text-decoration: none;
+}
+input.ui-button-text, button.ui-button-text {
+    *vertical-align: top; /* for a ie7 bug */
+    font-family: Hiragino Sans GB;
+}
+
+/** end ---ui-btn-base.css---*/
+/**Last Changed Author: xingmin.zhu--Last Changed Date: Mon Aug 20 15:19:38 CST 2012**/
+/**alice.components.ui-button-base-1.2**/
+/** CurrentDeveloper: afc163**/
+/** DeployDate: Tue Aug 21 11:08:34 CST 2012**/
+/** begin ---app-prodDetail.css---*/
+/*
+	@name: 生活助手组件 产品首页 产品介绍
+	@base: .app-prodDetail
+	@required: null
+	@example: 
+
+	<div class="app-prodDetail">
+		<div class="app-prodDetail-img">
+			信用卡还款
+		</div>
+		<div class="app-prodDetail-title">
+			<h2>信用卡还款</h2>
+		</div>
+		<div class="app-prodDetail-info">
+			<p>跨行还款0手续费，支持99.9%信用卡</p>
+		</div>
+		<div class="app-prodDetail-menu">
+			<ul>
+				<li class="search"><a href="#">账单查询</a></li>
+				<li class="setting"><a href="#">设置还款提醒</a></li>
+				<li class="card"><a href="#">我的信用卡</a></li>
+				<li class="list last"><a href="#">查看记录</a></li>
+				<li class="setting"><a href="#">设置缴费提醒</a></li>
+				<li class="account "><a href="#">我的缴费帐户</a></li>
+				<li class="list last"><a href="#">查看记录</a></li>
+			</ul>
+		</div>
+		<div class="app-prodDetail-action">
+			<a href="#" class="ui-button-green ui-btn-mgreen"><span class="">我要还款</span></a>
+		</div>
+	</div>
+
+*/
+/* ----------------------------------- .app-prodDetail 产品首页 产品介绍 -- */
+.app-prodDetail { clear: both; overflow: hidden; zoom: 1; padding-bottom: 20px; margin-bottom: 10px; border-bottom: 1px dashed #D6D6D6; }
+
+	/* -- .app-prodDetail-img -- */
+	.app-prodDetail-img { float: left; width: 100px; height: 100px; margin: 0 15px 0 0; text-indent: -9999px; border-radius: 18px;
+	background: url(https://img.alipay.com/sys/personalprod/style/home/icon/icon-credit-xxl.png) no-repeat left top;}
+
+	/* -- .app-prodDetail-title -- */
+	.app-prodDetail-title {  }
+		.app-prodDetail-title h2 { font-size: 22px; font-family: Microsoft YaHei, SimHei, SimSun, sans-serif; color: #4D4D4D; letter-spacing: 1px;
+}
+
+	/* -- .app-prodDetail-info -- */
+	.app-prodDetail-info { margin: 10px 0 10px 115px; font-size: 14px; color: #808080;  }
+
+	/* -- .app-prodDetail-menu -- */
+	.app-prodDetail-menu { margin: 0 0 5px 115px;
+		margin-bottom: 15px\9; /* IE hack */
+	}
+		.app-prodDetail-menu ul { overflow: hidden; zoom: 1; }
+			.app-prodDetail-menu li { float: left; margin-right: 5px; margin-bottom: 8px; padding: 0 6px 0 0; white-space: nowrap; border-right: 1px solid #CCCCCC; 
+			
+			}
+			.app-prodDetail-menu li.last { margin-right: 0; padding: 0; border-right: none; }
+				.app-prodDetail-menu li a:link,
+				.app-prodDetail-menu li a:visited { padding-left: 20px; padding-bottom: 1px; background: url(https://img.alipay.com/sys/personalprod/style/home/bg-app-prodDetail-menu.png) no-repeat left top; color: #1E92C0;
+					padding-top: 2px\9; /* IE hack */
+					_padding-top: 0px; /* IE6 hack */
+				}
+				.app-prodDetail-menu li a:hover,
+				.app-prodDetail-menu li a:active {  }
+			/* -- icon -- */
+			.app-prodDetail-menu li.search a:link,
+			.app-prodDetail-menu li.search a:visited { background-position: 0 0; }/* 查询 */
+			.app-prodDetail-menu li.setting a:link,
+			.app-prodDetail-menu li.setting a:visited { background-position: 0 -30px; }/* 设置 */
+			.app-prodDetail-menu li.card a:link,
+			.app-prodDetail-menu li.card a:visited { background-position: 0 -60px; }/* 信用卡 */
+			.app-prodDetail-menu li.list a:link,
+			.app-prodDetail-menu li.list a:visited { background-position: 0 -90px; }/* 记录 */
+			.app-prodDetail-menu li.account a:link,
+			.app-prodDetail-menu li.account a:visited { background-position: 0 -120px; }/* 帐户 */
+
+	/* -- .app-prodDetail-action -- */
+	.app-prodDetail-action { margin: 0 0 0 115px; }
+
+.app-prodDetail-menu .action .link-action{
+	background: url("https://i.alipayobjects.com/e/201112/2CXQvOIRml.png") no-repeat scroll 0 -1px 
+transparent;
+}
+.app-prodDetail-menu li a:link, .prod-detail-menu li a:visited{
+	padding-left: 20px;
+	padding-bottom: 1px;
+	background: url(https://img.alipay.com/sys/personalprod/style/home/bg-prod-detail-menu.png) no-repeat left top;
+	color: #1E92C0;
+	padding-top: 2px;
+	_padding-top: 0;
+}
+.app-prodDetail-menu li.card a:link, .app-prodDetail-menu li.card a:visited{
+	background-position: 0 -60px;
+}
+.app-prodDetail-menu li.search a:link, .app-prodDetail-menu li.search a:visited{
+	background-position: 0 0;
+}
+.app-prodDetail-menu li.last{
+	margin-right: 0;
+padding: 0;
+border-right: 0;
+}
+.app-prodDetail-menu li.list a:link, .app-prodDetail-menu li.list a:visited{
+	background-position: 0 -90px;
+}
+
+/** end ---app-prodDetail.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Wed Oct 31 15:10:53 CST 2012**/
+/**alice.components.app-prodDetail-1.0**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Wed Oct 31 16:00:41 CST 2012**/
+/** begin ---ui-grid.css---*/
+/**
+ * @name: 内容布局(25格栅格布局)
+ * @author: 偏右(xingmin.zhu@alipay.com)
+ * @description: 下边有注释的为常用宽度
+ * @example: (相加为25，则页面宽度为990px，最右边区块的需要加ui-grid-right)
+ * <div class="ui-content">
+ *     <div class="ui-grid-4"></div>
+ *     <div class="ui-grid-21 ui-grid-right"></div>
+ * </div>
+ */
+.ui-grid-1, .ui-grid-2, .ui-grid-3, .ui-grid-4, .ui-grid-5, .ui-grid-6, .ui-grid-7, .ui-grid-8, .ui-grid-9, .ui-grid-10, .ui-grid-11,.ui-grid-12, .ui-grid-13, .ui-grid-14, .ui-grid-15, .ui-grid-16, .ui-grid-17, .ui-grid-18, .ui-grid-19, .ui-grid-20, .ui-grid-21, .ui-grid-22, .ui-grid-23, .ui-grid-24, .ui-grid-25 {
+    margin: 0 10px 10px 0;
+    float:left;
+    display:inline;
+}
+
+.ui-grid-1 {width:30px;}
+.ui-grid-2 {width:70px;}
+.ui-grid-3 {width:110px;}
+.ui-grid-4 {width:150px;} /* 右侧推广位的宽度 */
+.ui-grid-5 {width:190px;} /* 左侧边栏的宽度 */
+.ui-grid-6 {width:230px;}
+.ui-grid-7 {width:270px;}
+.ui-grid-8 {width:310px;}
+.ui-grid-9 {width:350px;}
+.ui-grid-10 {width:390px;}
+.ui-grid-11 {width:430px;}
+.ui-grid-12 {width:470px;}
+.ui-grid-13 {width:510px;}
+.ui-grid-14 {width:550px;}
+.ui-grid-15 {width:590px;} /* 中央区域宽度 */
+.ui-grid-16 {width:630px;}
+.ui-grid-17 {width:670px;}
+.ui-grid-18 {width:710px;}
+.ui-grid-19 {width:750px;}
+.ui-grid-20 {width:790px;}
+.ui-grid-21 {width:830px;}	/* 交易明细表区域的宽度 */
+.ui-grid-22 {width:870px;}
+.ui-grid-23 {width:910px;}
+.ui-grid-24 {width:950px;}
+.ui-grid-25 {width:990px;} /* 最大页面宽度 */
+
+.ui-grid-right {margin-right:0;} /* 注意！当区块在页面最右边时，必须加ui-grid-right */
+
+/** end ---ui-grid.css---*/
+/**Last Changed Author: shuai.shao--Last Changed Date: Wed Dec 07 18:21:53 CST 2011**/
+/**alice.components.ui-grid-1.0**/
+/** begin ---app-prodSid.css---*/
+/*
+	@name: 生活助手组件 产品首页 产品提醒
+	@base: .app-prodSid
+	@required: null
+	@example: 
+
+<div class="app-prodAlert">
+	<h4>提示信息：</h4>
+	<p>提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容提示信息内容</p>
+</div>
+*/
+
+/* ----------------------------------- .app-prodAlert 产品提醒 -- */
+.app-prodAlert { margin-bottom: 15px; padding: 4px 7px; background: #FFFEB1; border: 1px solid #FFE25C; color: #FE8900;
+	outline: 1px solid #fff; 
+	outline-offset: -2px; 
+	box-shadow: 0 30px 30px rgba(255, 255, 255, 0.4) inset;
+}
+	.app-prodAlert h4 { margin: 0 0 4px 0; padding: 0 0 2px 0; font-weight: 700; border-bottom: 1px solid #FFE25C; }
+	.app-prodAlert p {  }
+
+
+/** end ---app-prodSid.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Thu Nov 01 14:16:09 CST 2012**/
+/**alice.components.app-prodAlert-1.0**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Thu Nov 01 14:16:26 CST 2012**/
+/** begin ---app-mod.css---*/
+/*
+	@name: 生活助手组件 产品首页 侧栏
+	@base: .app-mod
+	@required: null
+	@example: 
+*/
+
+/* ----------------------------------- .app-mod -- */
+.app-mod {  }
+/* -- .app-mod-title -- */
+.app-mod-title { position: relative; }
+.app-mod-title h4 { display: inline; display: inline-block; margin: 0 0 6px 0; font-size: 14px; font-weight: 700; color: #345F8C; text-shadow: 1px 1px 0 #fff;}
+.app-mod-title h4 span { margin: 0 0 0 7px; font-size: 12px; font-weight: 400; color: #666666; }
+.app-mod-title a.links { position: absolute; top: 2px; right: 0; color: #345F8C; }
+
+/* -- .app-mod-content -- */
+.app-mod-content {  }
+
+/* -- .app-mod-bottom -- */
+.app-mod-bottom { display: none; }
+.app-mod-notice{
+	margin-bottom: 15px;
+	padding: 4px;
+	background: #F2F2F2;
+}	
+.app-mod-notice .app-mod-content{
+	background: white;
+	box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.01) inset;
+	padding:2px 0 2px 4px;
+}
+	
+	
+
+/** end ---app-mod.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Wed Oct 31 15:09:51 CST 2012**/
+/**alice.components.app-mod-1.0**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Wed Oct 31 15:58:50 CST 2012**/
+/** begin ---ui-list.css---*/
+/**
+ * @name:         ui-list
+ * @author:       展新(zhanxin.lin@alipay.com)
+ * @Description:  列表
+ * @example:
+ * <ul class="ui-list">
+ *    <li class="ui-list-item">列表</li>
+ * </ul>
+ */
+.ui-list {
+    display: inline-block;
+    padding: 10px 10px;
+}
+/* 默认有方角 */
+.ui-list-item {
+    font-size: 12px;
+    line-height: 20px;
+    background: url(https://img.alipay.com/sys/personal/style/ui-components.png) no-repeat -172px -19px;
+    padding-left: 10px;
+    color: #808080;
+}
+.ui-list-item a {
+    font-size: 12px;
+    line-height: 20px;
+}
+/* 灰色小方角 */
+.ui-list-gray .ui-list-item {
+    background: url(https://img.alipay.com/sys/personal/style/ui-components.png) no-repeat -188px 2px;
+}
+/* 灰色小方角＋灰色链接 */
+.ui-list-graylink .ui-list-item {
+    background: url(https://img.alipay.com/sys/personal/style/ui-components.png) no-repeat -188px 2px;
+}
+.ui-list-graylink .ui-list-item a { color: #666666; }
+/* 没有小图标的 */
+.ui-list-nosquare .ui-list-item {
+    background: transparent;
+    padding-left: 0;
+}
+
+
+/** end ---ui-list.css---*/
+/**Last Changed Author: shuai.shao--Last Changed Date: Wed Dec 07 18:18:01 CST 2011**/
+/**alice.components.ui-list-1.0**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Wed Oct 31 15:53:02 CST 2012**/
+/** begin ---ui-share2.css---*/
+/*
+	@name: 生活助手组件 分享
+	@base: .tip-faq
+	@required: null
+	@example: 
+	<div class="ui-share-item">
+		<h4>在新浪微博关注我们</h4>
+		<div class="ui-share-item-img">
+			<a href="http://weibo.com/shenghuoalipay" target="_blank"><img src="$imageServer.getURI('/sys/personalprod/style/home/img/img-weibo.png')" width="50" height="50" alt="＋加关注" /></a>
+		</div>
+		<div class="ui-share-item-name">
+			<span class="ui-share-item-name-vip"><a href="http://weibo.com/shenghuoalipay" target="_blank" >支付宝生活助手</a></span>
+			<a class="ui-share-item-name-follow" href="http://weibo.com/shenghuoalipay" target="_blank" >加关注</a>
+		</div>
+		<div id="shareit" class="ui-share-item-icon">
+			分享到：
+			<a class="ui-icon-sns ui-icon-sns-sina" href="#" title="分享到新浪微博">分享到新浪微博</a>
+			<a class="ui-icon-sns ui-icon-sns-qq" href="#" title="分享到QQ微博">分享到QQ微博</a>
+			<a class="ui-icon-sns ui-icon-sns-renren" href="#" title="分享到人人网">分享到人人网</a>
+			<a class="ui-icon-sns ui-icon-sns-kaixin" href="#" title="分享到开心网">分享到开心网</a>
+			<a class="ui-icon-sns ui-icon-sns-douban" href="#" title="分享到豆瓣">分享到豆瓣</a>
+		</div>
+	</div>
+*/
+/* ----------------------------------- .ui-share-item 分享 -- */
+.ui-share-item { overflow: hidden; zoom: 1;  }
+	.ui-share-item h4 { margin: 0 0 10px 0; font-size: 14px; font-weight: 700; color: #345F8C;  }
+	/* -- .ui-share-item-img -- */
+	.ui-share-item-img { float: left; margin: 0 0 10px 0; }
+		.ui-share-item-img a:link,
+		.ui-share-item-img a:visited { display: block; padding: 2px; border: 1px solid #CCCCCC; 
+			-webkit-transition: all 0.15s ease-in;
+			-moz-transition: all 0.15s ease-in;
+			transition: all 0.15s ease-in;
+		}
+		.ui-share-item-img a:link img,
+		.ui-share-item-img a:visited img { display: block; }
+		.ui-share-item-img a:hover,
+		.ui-share-item-img a:active { border: 1px solid #999999; 
+			-webkit-transition: all 0.15s ease-in;
+			-moz-transition: all 0.15s ease-in;
+			transition: all 0.15s ease-in;
+		}
+	/* -- .ui-share-item-name -- */
+	.ui-share-item-name { margin: 0 0 0 65px; }
+		.ui-share-item-name-vip { display: block; margin: 0 0 8px 0; line-height: 100%; background: url(https://img.alipay.com/common/life/bg-share.png) no-repeat 86px -30px; }
+		.ui-share-item-name-follow:link,
+		.ui-share-item-name-follow:visited { display: inline-block; padding: 0 7px 0 17px; line-height: 17px; background: #E3FFD5 url(https://img.alipay.com/common/life/bg-share.png) no-repeat 5px 5px; border: 1px solid #CFF3BB; color: #339900;
+			border-radius: 3px;
+			-webkit-transition: all 0.25s ease-in;
+			-moz-transition: all 0.25s ease-in;
+			transition: all 0.25s ease-in;
+			line-height: 17px\9; /* -- IE hack -- */
+			padding-top: 2px\9; /* -- IE hack -- */
+			_padding-top: 0\9; /* -- IE6 hack -- */
+		}
+		.ui-share-item-name-follow:hover,
+		.ui-share-item-name-follow:active { text-decoration: none; border: 1px solid #A3D18C;
+			-webkit-transition: all 0.25s ease-in;
+			-moz-transition: all 0.25s ease-in;
+			transition: all 0.25s ease-in;
+		}
+	/* -- .ui-share-item-icon -- */
+	.ui-share-item-icon { clear: both; height: 19px; padding: 7px 10px 3px 10px; background: url(https://img.alipay.com/common/life/bg-share.png) no-repeat 0 -60px; 
+		border-radius: 3px;
+	}
+		.ui-icon-sns { display: inline-block; overflow: hidden; width: 16px; height: 16px; margin: 0 10px 4px 0; vertical-align: middle; text-indent: -9999px; background: url(https://img.alipay.com/common/life/bg-share.png) no-repeat 0 -60px; 
+			margin: 0 10px 3px 0\9; /* IE hack */
+		}
+		/* -- 新浪微博 -- */
+		.ui-icon-sns-sina { background-position: 0 -100px; }
+		/* -- 开心网 -- */
+		.ui-icon-sns-kaixin { background-position: 0 -120px; }
+		/* -- 网易微博 -- */
+		.ui-icon-sns-163 { background-position: 0 -140px; }
+		/* -- 人人网 -- */
+		.ui-icon-sns-renren { background-position: 0 -160px; }
+		/* -- 淘江湖 -- */
+		.ui-icon-sns-taojianghu { background-position: 0 -180px; }
+		/* -- QQ微博 -- */
+		.ui-icon-sns-qq { background-position: 0 -200px; }
+		/* -- 豆瓣 -- */
+		.ui-icon-sns-douban { background-position: 0 -220px; }
+
+/** end ---ui-share2.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Mon Nov 12 19:37:49 CST 2012**/
+/**alice.components.ui-share2-1.0**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Mon Nov 12 19:38:09 CST 2012**/
+/** begin ---ui-faq.css---*/
+/*
+	@name: 生活助手组件 使用遇到问题?
+	@base: .tip-faq
+	@required: null
+	@example: 
+*/
+/* ----------------------------------- #faq 使用遇到问题 -- */
+.tip-faq {  }
+
+	/* -- 回到顶部 -- */
+	.tip-faq .fn-right { display: none; }
+
+	/* -- 标题 -- */
+	.tip-faq h3 { margin: 0 0 8px 0; font-size: 14px; font-weight: 700; color: #345F8C; border-bottom: 1px solid #E6E6E6; }
+
+	/* -- 问题列表 -- */
+	.tip-faq dl {   }
+		.tip-faq dl dt { margin: 0 0 3px 0; color: #4D4D4D; }
+		.tip-faq dl dd { margin: 0 0 12px 0; color: #999999; }
+
+	/* -- 更多相关帮助 -- */
+	.tip-faq p.tip-faq-link { margin: 0 0 10px 0; }
+		.tip-faq p.tip-faq-link a:link,
+		.tip-faq p.tip-faq-link a:visited { font-weight: 700; color: #0B60AF; }
+
+	/* -- 搜索表单 -- */
+	.tip-faq .com-search {  }
+		.tip-faq .com-search span {  }
+			.tip-faq .com-search span .i-text { width: 196px; height: 26px; padding-left: 8px; border: 1px solid #CCCCCC; color: #999999; 
+				padding: 6px 0 0 8px\9; 
+				height: 20px\9;
+				_padding: 4px 0 0 8px; 
+				_height: 22px; 
+				outline: none; 
+				box-shadow: 2px 2px 2px #eee inset;
+				-webkit-transition: all 0.15s ease-in;
+				-moz-transition: all 0.15s ease-in;
+				transition: all 0.15s ease-in;
+			}
+			.tip-faq .com-search span .i-text:hover,
+			.tip-faq .com-search span .i-text:focus { border: 1px solid #999999; 
+				-webkit-transition: all 0.15s ease-in;
+				-moz-transition: all 0.15s ease-in;
+				transition: all 0.15s ease-in;
+			}
+			.tip-faq .com-search span.fm-hover .i-text,
+			.tip-faq .com-search span.fm-focus .i-text {
+				color: #666666; 
+			}
+
+		.tip-faq .com-search .btn-fixed { height: 28px; padding: 0 4px 2px 10px; font-weight: 700; cursor: pointer; border: 1px solid #CCCCCC; letter-spacing: 6px; background: #E0E0E0 url(https://img.alipay.com/sys/personalprod/style/home/bg-index.png) no-repeat left -200px; color: #4D4D4D; 
+			padding: 0 6px 0 8px\9;  /* IE hack */
+			text-shadow: 1px 1px 0 #fff;
+			-webkit-transition: all 0.25s ease-in;
+			-moz-transition: all 0.25s ease-in;
+			transition: all 0.25s ease-in;
+		}
+		@media screen and (-webkit-min-device-pixel-ratio:0) { /* chrome hack */
+			.tip-faq .com-search .btn-fixed { padding: 0 4px 0 10px; }
+		}
+		.tip-faq .com-search .btn-fixed:hover,
+		.tip-faq .com-search .btn-fixed:focus { border: 1px solid #999999; 
+			-webkit-transition: all 0.25s ease-in;
+			-moz-transition: all 0.25s ease-in;
+			transition: all 0.25s ease-in;
+		}
+
+/** end ---ui-faq.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Wed Oct 31 15:17:34 CST 2012**/
+/**alice.components.ui-faq-1.0**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Wed Oct 31 15:17:48 CST 2012**/
+/** begin ---ui-btn.css---*/
+/**
+ * @name:       按钮（通用）ui-button
+ * @author:     展新（zhanxin.lin@alipay.com）
+ * @example:
+ * 外层可以是 div, p, a, span 标签
+ * 里层可以是 a, input, button
+ * div > a
+ * <div class="ui-button ui-button-sorange">
+ *    <a class="ui-button-text">确定</a>
+ * </div>
+ *
+ * div > input
+ * <div class="ui-button ui-button-sorange">
+ *    <input type="button" class="ui-button-text" value="确定" />
+ * </div>
+ *
+ * a > input
+ * <a class="ui-button ui-button-sorange">
+ *    <span class="ui-button-text">确定</span>
+ * </a>
+ */
+.ui-button-lorange, .ui-button-lorange:hover,
+.ui-button-morange, .ui-button-morange:hover,
+.ui-button-sorange, .ui-button-sorange:hover,
+.ui-button-lorange .ui-button-text,
+.ui-button-morange .ui-button-text,
+.ui-button-sorange .ui-button-text {
+    background: transparent url(https://i.alipayobjects.com/e/201208/3IgyctwEjp.png) no-repeat;
+    color: #fff;
+}
+
+/* large-size */
+.ui-button-lorange { background-position: 0 0; }
+.ui-button-lorange .ui-button-text {
+    padding: 0 20px;
+    background-position: right -177px;
+    line-height:35px;
+    height:35px;
+}
+.ui-button-lorange:hover { background-position: 0 -45px; }
+.ui-button-lorange:hover .ui-button-text {
+    background-position: right -222px;
+}
+
+/* middle-size */
+.ui-button-morange { background-position: 0 -355px; }
+.ui-button-morange .ui-button-text {
+    padding: 0 22px;
+    background-position: right -503px;
+    line-height: 31px;
+    height: 31px;
+}
+.ui-button-morange:hover { background-position: 0 -392px; }
+.ui-button-morange:hover .ui-button-text {
+    background-position: right -540px;
+}
+/* small-size */
+.ui-button-sorange { background-position: 0 -651px; }
+.ui-button-sorange .ui-button-text {
+    padding: 0 12px;
+    font-size: 12px;
+    background-position: right -771px;
+    line-height:25px;
+    height:25px;
+}
+.ui-button-sorange:hover { background-position: 0 -681px; }
+.ui-button-sorange:hover .ui-button-text {
+    background-position: right -801px;
+}
+
+
+/** end ---ui-btn.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Wed Oct 31 14:38:26 CST 2012**/
+/**alice.components.ui-button-orange-1.3**/
+/** CurrentDeveloper: lixiaochou**/
+/** DeployDate: Wed Oct 31 18:09:52 CST 2012**/
+/** @merged-artifact [alice.components.ui-button-base-1.2,alice.components.app-prodDetail-1.0,alice.components.ui-grid-1.0,alice.components.app-prodAlert-1.0,alice.components.app-mod-1.0,alice.components.ui-list-1.0,alice.components.ui-share2-1.0,alice.components.ui-faq-1.0,alice.components.ui-button-orange-1.3] */
+
+/** begin ---global.css---*/
+a{
+    color: #08C;
+}
+.app-prod-desc{
+    padding: 10px;
+    border-bottom:1px solid #F2F2F2;
+}
+.app-prod-desc-last{
+    border: none;
+}
+.app-prod-desc:hover{
+    background-color:#EFFBFE;
+    box-shadow:0 30px 30px rgba(255,255,255,0.5) inset;
+    -webkit-transition:all .15s ease-in;
+    -moz-transition:all .15s ease-in;
+    transition:all .15s ease-in;
+}
+.app-prod-desc-label{
+    color: #345F8C;
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+}
+.app-prod-desc-text{
+    color: gray;
+    margin-top: 10px;
+}
+.prod-newbie{
+    padding: 10px 15px 15px 15px;
+    border: 1px solid #E6E6E6;
+    background: #FBFBFB;
+    outline: 1px solid white;
+    outline-offset: -2px;
+}
+.prod-choosecity{
+    zoom: 1;
+    margin: 0 0 10px 0;
+    position: relative;
+    z-index: 10;
+    height: 40px;
+    padding-left: 15px;
+    background: whiteSmoke;
+    border-radius: 2px;
+}
+.prod-choosecity h3{
+    position: absolute;
+    top: 8px;
+    left: 15px;
+    font-size: 18px;
+    font-family: SimHei;
+    color: #005C9D;
+}
+.prod-choosecity .i-text{
+    position: absolute;
+    top: 7px;
+    left: 100px;
+    width: 72px;
+    height: 24px;
+    padding: 0 0 0 6px;
+    border: 1px solid #CCC;
+    border-radius: 3px 0 0 3px;
+    box-shadow: 2px 2px 2px #EEE inset;
+    outline: none;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+    height: 20px	9;
+    padding: 4px 0 0 6px	9;
+}
+.prod-choosecity .i-text:hover, .prod-choosecity .i-text:focus{
+    border: 1px solid #999;
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+}
+.prod-choosecity .a-arrow{
+    overflow: hidden;
+    position: absolute;
+    top: 7px;
+    left: 180px;
+    width: 27px;
+    height: 26px;
+    text-indent: -9999px;
+    background: url(https://img.alipay.com/sys/personalprod/style/home/pucprod/bg-puc.png) no-repeat scroll 0 -40px;
+    outline: none;
+}
+.hot-city-container{
+    background: #DBDBDB;
+    width: 240px;
+    border: 1px solid #BCBCBC;
+    padding-bottom: 5px;
+    position: absolute;
+    left: 130px;
+    top: 33px;
+    z-index: 9997;
+    background: #DBDBDB url(https://img.alipay.com/assets/i/cn/mipgw/tb-bmcenter/hot-city-header.png) repeat-x;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    _top: 31px;
+}
+.prod-choosecity .fm-explain{
+    position: absolute;
+    top: 11px;
+    left: 215px;
+    color: #999;
+}
+
+/** end ---global.css---*/
+/**Last Changed Author: qi.lqlq--Last Changed Date: Wed Dec 26 16:42:08 CST 2012**/
+/**alice.style.appHome-1.0**/
+/** CurrentDeveloper: lixiaochou077**/
+/** DeployDate: Mon Dec 31 15:31:01 CST 2012**/
