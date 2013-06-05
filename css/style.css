@@ -98,11 +98,15 @@ img {
 }
 
 header {
+  margin-top: 70px;
   width:270px;
   float:left;
   position:fixed;
 }
-
+header h1{
+    font-size: 28px;
+    margin-bottom: 20px;
+}
 header ul {
   list-style:none;
   height:40px;
@@ -262,4 +266,10 @@ footer {
 .morelink a{
     margin: 0;
     text-decoration: underline;      
+}
+.excerpt-title{
+    font-size: 1.17em;
+}
+.excerpt{
+    margin-bottom: 35px;
 }
