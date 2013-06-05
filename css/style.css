@@ -111,6 +111,9 @@ header h1{
     color: #fff;
     background: #7cc0b0;
 }
+header h1 span{
+    font-family: "Lucida Grande";
+}
 header a{
     color: #a8a8a8;
 }
