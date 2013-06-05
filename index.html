@@ -7,7 +7,7 @@ title: test
         <h3 class="excerpt-title"><a href="{{ post.url }}">{{ post.title }}</a></h3>
 　　　　 <div class="excerpt">
             {{ post.content | split: '<!-- more -->' | first }}
-            <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">read more...</a>
+            <a href="{{ post.url }}" class="read-more">read more...</a>
         </div>
         {% endfor %}
 　　</ul>
