@@ -37,7 +37,7 @@ a {
   text-decoration:none;
 }
 a:hover{
-    color: #f30;
+   text-decoration: underline;
 }
 
 a small {
@@ -104,9 +104,10 @@ header {
 }
 header p{
     margin-bottom: 0;
-    border-bottom: 1px solid #a8a8a8;
+    border-bottom: 3px double #e1e1e1;
 }
 header h1{
+    padding: 5px;
     color: #fff;
     background: #7cc0b0;
 }
