@@ -1,0 +1,13 @@
+---
+layout: home
+title: im077
+---
+    <ul>
+　　　　 {% for post in site.work %}
+        <h3 class="excerpt-title"><a href="{{ life.url }}">{{ work.title }}</a></h3>
+　　　　 <div class="excerpt">
+            {{ work.content | split: '<!-- more -->' | first }}
+            <a href="{{ life.url }}" class="read-more">read more...</a>
+        </div>
+        {% endfor %}
+　　</ul>
